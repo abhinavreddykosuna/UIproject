@@ -1,0 +1,99 @@
+<html>
+<head>
+<title> Abhi's Icecreams </title>
+		<meta charset="utf-8">
+	<link href = "home.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	
+	<div class="dropdown">
+	<button class="dropbtn">Menu</button>
+	<div class="dropdown-content">
+	<a href="kosuna.html">home</a>
+    <a href="cones.html">icecream cones</a>
+	<a href="milkshakes.html">milkshakes</a>
+    <a href="floats.html">floats</a>
+	</div>
+	</div>
+	<p><h1>Select any flavor of cone</h1></p>
+	<p>
+	<img src="https://s-media-cache-ak0.pinimg.com/236x/e8/77/c5/e877c57f7bd5ebb0dea6c23eadb11a3f.jpg"width="200" height="400">
+	<img src="https://s-media-cache-ak0.pinimg.com/236x/c9/f9/9f/c9f99f4401fd266c5bc455507c64f30e.jpg" width="200" height="400">
+	<img src="http://bucks.missouri.edu/images/tiger-stripe.jpg" width="200" height="400">
+	<img src="http://previews.123rf.com/images/ifong/ifong1011/ifong101100021/8313933-mint-ice-cream-isolated-on-white-background-Stock-Photo-cone.jpg" width="200" height="400">
+     <img src="https://s-media-cache-ak0.pinimg.com/736x/d1/7b/53/d17b53093beb7403342006855b3c108e.jpg" width="200" height="400"></p>
+		
+	
+	<input type="checkbox" onclick="if(this.checked) {myFunction() }else {noFunction() }"name="cone" value="vanilla">select vanilla &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; 
+	<input type="checkbox" onclick="if(this.checked) {myFunction() }else {noFunction() }"name="cone" value="strawberry">select strawberry &emsp; &emsp;&emsp; &emsp; &emsp; 
+	<input type="checkbox" onclick="if(this.checked) {myFunction() }else {noFunction() }"name="cone" value="sweetcream">select sweetcream &emsp; &emsp;&emsp; &emsp; 
+	<input type="checkbox" onclick="if(this.checked) {myFunction() }else {noFunction() }"name="cone" value="pista">select pista &emsp; &emsp;&emsp; &emsp;  
+	<input type="checkbox" onclick="if(this.checked) {myFunction() }else {noFunction() }"name="cone" value="chocolate">select chocolate 
+				
+	<br>
+	<b> <label>scoops
+<select name="scoops" onchange="scoopsof(this.options[this.selectedIndex].value)">
+<option selected>0</option>
+<option>1</option>
+<option>2</option>
+</select>
+</label></b> <br><br>
+<input type="radio" name="vessel" value="cup">cup&emsp;
+	<input type="radio" name="vessel" value="cone">cone&emsp;
+	<br>
+	<br>
+	<br>
+	<br>
+	<form action = "#">
+	<input id = "clickbutton" type="button" value="Submit">
+	</form>&emsp;&emsp;&emsp;&emsp;&emsp;
+	
+	<br><br>
+	 <p id= "demo"></p>
+	 <p id="demo1"></p>
+	 <form>
+	<input type="button" value="order"  onclick="order()">
+	</form>
+	
+	
+	<script>
+	var amount=0;
+	var noscoops=0;
+	var temp=0;
+	document.getElementById("clickbutton").addEventListener("click", function() {
+    addtocart();
+	});
+	
+	function scoopsof(temp) {
+	noscoops = temp;
+	}
+	function myFunction() {
+	temp++;
+	amount+=7;
+	if(temp!=noscoops && temp!=1){
+		alert("you selected more flavors than scoops");
+		}
+	
+	}
+	function noFunction() {
+	temp--;
+	amount-=7;
+	}
+	
+	
+	function addtocart() {
+	
+	
+	document.getElementById("demo").innerHTML = "ORDER SUMMARY";
+	document.getElementById("demo1").innerHTML = "The amount to be paid is: $"+amount;
+	
+	
+	}
+	function order() {
+		window.location.assign("order.html");}
+		</script>
+		
+</body>
+</html>
+
+

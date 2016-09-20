@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>IceCreamAbhi</Name>
+    <ProjectGuid>3b714e14-a9d1-4578-b260-0a6d74d67e84</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <AssemblyName>IceCreamAbhi</AssemblyName>
+    <SpecificPageValue>cones.html</SpecificPageValue>
+    <StartAction>SpecificPage</StartAction>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="connect.php" />
+    <Compile Include="retreive.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="back1.jpg" />
+    <Content Include="cones.html" />
+    <Content Include="final.html" />
+    <Content Include="floats.html" />
+    <Content Include="home.css" />
+    <Content Include="kosuna.html" />
+    <Content Include="milkshakes.html" />
+    <Content Include="order.html" />
+  </ItemGroup>
+</Project>

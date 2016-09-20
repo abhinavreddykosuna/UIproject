@@ -1,0 +1,75 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Abhi's Icecreams </title>
+    <meta charset="utf-8">
+    <link href="home.css" rel="stylesheet" type="text/css">
+    <script>
+        function final() {
+            var name = document.getElementById("txtName").value;
+            var phone =document.getElementById("txtPhone").value;
+            var adress = document.getElementById("textArea").value;
+            
+            location.href = "connect.php?name=" + name + "&phone=" + phone + "&address=" + adress;
+    }
+    </script>
+
+</head>
+<body>
+    <form action="connect.php" method="post">
+
+        <div class="dropdown">
+            <button class="dropbtn">Menu</button>
+            <div class="dropdown-content">
+                <a href="kosuna.html">home</a>
+                <a href="cones.html">icecream cones</a>
+                <a href="milkshakes.html">milkshakes</a>
+                <a href="floats.html">floats</a>
+            </div>
+        </div>
+        
+        <br>
+        <br>
+        <h4>
+            Please fill in your details
+        </h4>
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        Name:
+                    </td>
+                    <td>
+
+                        <input id="txtName" type="text" name="name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Phone no:
+                    </td>
+                    <td>
+                        <input id="txtPhone" type="text" name="phoneno">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Address:
+                    </td>
+                    <td>
+                        <textarea id="textArea" cols="40" rows="4" name="address"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="confirm your details" onclick="final()">
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+    </form>
+</body>
+</html>
